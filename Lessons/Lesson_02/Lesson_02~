@@ -1,0 +1,5 @@
+#lang racket
+
+; DrRacket é compilado e interpretado
+; ctrl + r = Compila e cria uma espécie de bytecode. 
+(define ())
