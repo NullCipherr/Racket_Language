@@ -73,6 +73,25 @@
 ; Passo 1 : Assinatura e propósito
 ; Passo 2 : Exemplos
 
+(define par-tests
+  (test-suite
+   "par tests"
+   (check-equal? (par 6) #t)
+   (check-equal? (par 7) #f)
+   (check-equal? (par 10) #t)))
+
+(define (par x)
+  (if (= (remainder x 2) 0)
+      #t
+      #f))
+
+(executa-testes par-tests)
+
+; ---------------------------------------------------------------
+
+; Passo 1 : Assinatura e propósito
+; Passo 2 : Exemplos
+
 (define maior-tests
   (test-suite
    "maior tests"
@@ -81,6 +100,8 @@
    (check-equal? (maior "Um" "Tres") "Tres")))
 
 (define (maior str1 str2)
-  (if (> (string-length str1) (string-length str2)) str1 str2))
+  (if (> (string-length str1) (string-length str2))
+      str1
+      str2))
 
 (executa-testes maior-tests)
